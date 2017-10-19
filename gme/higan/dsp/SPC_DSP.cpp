@@ -1222,7 +1222,7 @@ void SPC_DSP::init( void* ram_64k )
 	m.ram = (uint8_t*) ram_64k;
 	mute_voices( 0 );
 	disable_surround( false );
-	interpolation_level( 0 );
+	interpolation_level( 1 );
 	set_output( 0, 0 );
 	reset();
 	

@@ -59,7 +59,7 @@ static const BOOST::uint8_t mask_tab[6]={0x80,0xE0,0xF0,0xF8,0xFC,0xFE};
 
 static const BOOST::uint8_t val_tab[6]={0,0xC0,0xE0,0xF0,0xF8,0xFC};
 
-size_t utf8_char_len_from_header( char p_c )
+/*size_t utf8_char_len_from_header( char p_c )
 {
 	size_t cnt = 0;
 	for(;;)
@@ -119,9 +119,9 @@ size_t utf8_decode_char( const char *p_utf8, unsigned & wide, size_t mmax )
 	wide = res;
 
 	return cnt;
-}
+}*/
 
-size_t utf8_encode_char( unsigned wide, char * target )
+/*size_t utf8_encode_char( unsigned wide, char * target )
 {
 	size_t count;
 
@@ -170,9 +170,9 @@ size_t utf8_encode_char( unsigned wide, char * target )
 	}
 
 	return count;
-}
+}*/
 
-size_t utf16_encode_char( unsigned cur_wchar, blargg_wchar_t * out )
+/*size_t utf16_encode_char( unsigned cur_wchar, blargg_wchar_t * out )
 {
 	if ( cur_wchar < 0x10000 )
 	{
@@ -194,9 +194,9 @@ size_t utf16_encode_char( unsigned cur_wchar, blargg_wchar_t * out )
 	{
 		if ( out ) *out = '?'; return 1;
 	}
-}
+}*/
 
-size_t utf16_decode_char( const blargg_wchar_t * p_source, unsigned * p_out, size_t p_source_length )
+/*size_t utf16_decode_char( const blargg_wchar_t * p_source, unsigned * p_out, size_t p_source_length )
 {
 	if ( p_source_length == 0 ) return 0;
 	else if ( p_source_length == 1 )
@@ -224,10 +224,10 @@ size_t utf16_decode_char( const blargg_wchar_t * p_source, unsigned * p_out, siz
 		*p_out = decoded;
 		return retval;
 	}
-}
+}*/
 
 // Converts wide-character path to UTF-8. Free result with free(). Only supported on Windows.
-char* blargg_to_utf8( const blargg_wchar_t* wpath )
+/*char* blargg_to_utf8( const blargg_wchar_t* wpath )
 {
 	if ( wpath == NULL )
 		return NULL;
@@ -272,10 +272,10 @@ char* blargg_to_utf8( const blargg_wchar_t* wpath )
 
 	assert( actual == needed );
 	return path;
-}
+}*/
 
 // Converts UTF-8 path to wide-character. Free result with free() Only supported on Windows.
-blargg_wchar_t* blargg_to_wide( const char* path )
+/*blargg_wchar_t* blargg_to_wide( const char* path )
 {
 	if ( path == NULL )
 		return NULL;
@@ -320,5 +320,5 @@ blargg_wchar_t* blargg_to_wide( const char* path )
 	assert( actual == needed );
 	return wpath;
 }
-
+*/
 BLARGG_NAMESPACE_END
